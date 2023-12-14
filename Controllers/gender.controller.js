@@ -13,7 +13,13 @@ export default class GenderController {
     }
     getone = async (id) => {
         //find by pk = find by primary key
-        const result = await Gender.findByPk(id);
+        const result = await Gender.findByPk(id,{
+          include:[
+              {
+                  model: User
+              }
+          ]
+      });
         return result
     }
     create = async (data) => {
