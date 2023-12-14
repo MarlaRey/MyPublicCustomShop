@@ -10,9 +10,16 @@ export default class BrandController {
         const result = await Brand.findAll();
        return result
     }
+    //hent ét brand og se hvilke produkter der hører under:
     getone = async (id) => {
         //find by pk = find by primary key
-        const result = await Brand.findByPk(id);
+        const result = await Brand.findByPk(id,{
+            include:[
+                {
+                    model: Product
+                }
+            ]
+        });
         return result
     }
     create = async (data) => {
@@ -28,12 +35,5 @@ export default class BrandController {
         const result = await Brand.destroy ({where: {id:id}});
         return result
     }
-      // Tilføj en metode for at hente produkter for et brand
-  // getProducts = async (brandId) => {
-  //   const result = await Brand.findByPk(brandId, {
-  //     include: "Products", // Antager, at forholdet mellem Brand og Product er defineret
-  //   });
-  //   return result.Products;
-  // };
 }
 

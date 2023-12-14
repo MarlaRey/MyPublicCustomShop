@@ -15,6 +15,7 @@ export default class CategoryController {
         const result = await Category.findAll();
        return result
     }
+    //get one category and the products that belongs to it
     getone = async (id) => {
         //find by pk = find by primary key
         const result = await Category.findByPk(id,{
@@ -39,19 +40,5 @@ export default class CategoryController {
         const result = await Category.destroy ({where: {id:id}});
         return result
     }
-    getProducts = async (categoryId) => {
-        const category = await Category.findByPk(categoryId, {
-            include: [{
-                model: Product,
-            }]
-        });
-    
-        if (!category) {
-            return null;
-        }
-    
-        return category.Products;
-    };
-    
 }
 
