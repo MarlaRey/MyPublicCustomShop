@@ -17,7 +17,13 @@ export default class CategoryController {
     }
     getone = async (id) => {
         //find by pk = find by primary key
-        const result = await Category.findByPk(id);
+        const result = await Category.findByPk(id,{
+            include: [
+                {
+                    model:Product
+                }
+            ]
+        });
         return result
     }
     create = async (data) => {
