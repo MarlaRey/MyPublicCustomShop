@@ -1,6 +1,9 @@
 # MyPublicCustomShop
 Opsætning af shop API i node.js
 
+# SQL-dump
+for at få den fulde brugeroplevelse af dette vidunderlige projekt, bør man hente dette sql-dump:
+https://we.tl/t-5BcSoZXlBK
 
 ## Guide til opsætning:
 # 1: Clone githubfilen ned på din computer.
