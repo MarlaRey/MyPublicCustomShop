@@ -1,0 +1,116 @@
+body {
+    max-width: 350px;
+ 
+    font-family: Arial, sans-serif;
+    
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .burger-menu {
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    /* Add your existing styles here */
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: #070707e8; /* Adjust background color as needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add box shadow for styling */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.menu.show {
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px;
+  
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+}
+.menu .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: red;
+}
+.category-list{
+    color: white;
+}
+    
+}
+
+.highlights, .most-popular {
+    max-width: 800px;
+    margin: 20px auto;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+}
+
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#prevBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+}
+
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend MyCustomshop</title>
+    <script src="Frontend/JS/frontend.js" defer></script>
+    <link rel="stylesheet" href="Frontend/SCSS/styles.css">
+</head>
+<body>
+   
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">MyCustomshop</div>
+        <div class="burger-menu" >☰</div>
+        <div class="menu">
+            <div class="close-btn" onclick="toggleMenu()">✕</div>
+            <ul class="category-list">
+                <!-- Kategorier vil blive tilføjet her dynamisk -->
+            </ul>
+        </div>
+    </header>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+        <h2>Highlights</h2>
+        <div class="image-slider">
+            <button id="prevBtn" class="slider-btn">&#10094;</button>
+        
+            <button id="nextBtn" class="slider-btn">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Mest Populære Section -->
+    <section class="most-popular">
+        <h2>Mest populære</h2>
+        <div class="product-gallery"></div>
+    </section>
+
+</body>
+</html>
